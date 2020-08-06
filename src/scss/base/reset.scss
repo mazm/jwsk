@@ -16,7 +16,6 @@ body {
   @include font-smoothing(on);
   color: $color-black;
   background: $color-white;
-  font-size: rem(16px);
   line-height: 1.2;
   min-width: 320px;
   @include Noto-Regular;

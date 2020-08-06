@@ -30,7 +30,6 @@ composer.lock
 /production/
 /.temp/
 .sass-cache
-*.map
 /*.html
 .tmp
 tmp

@@ -42,15 +42,13 @@
 
 /* Single property */
 html {
-  @include interpolate(font-size, 320px, 1366px, 14px, 20px);
+  @include interpolate(font-size, 320px, 1200px, 14px, 20px);
 }
 
 /* Multiple properties with same values */
 h1,h2,h3,h4,h5 {
-  @include interpolate((padding-top, padding-bottom), 20rem, 70rem, 0rem, .5rem);
+  @include interpolate((padding-top, padding-bottom), 20rem, 75rem, 0rem, .5rem);
 }
-
-
 
 // Typography
 //
