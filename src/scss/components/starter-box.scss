@@ -1,0 +1,98 @@
+// Note: This is an example of components style, so please remove it or re-write it on your styles.
+.wrapper {
+  overflow: hidden;
+}
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 490px;
+  height: 590px;
+  margin: -295px 0 0 -245px;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.6);;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    
+    color: $color-white;
+  h1 {
+    @include animate(text-shadow);
+    font-size: rem(48px);
+    text-align: center;
+    @include media('hover') {
+      &:hover {
+        text-shadow: 0.1rem 0.5rem 0.5rem rgba(#fff, 0.5);
+      }
+    }
+  }
+  ul {
+    width: 80%;
+    margin: 0 auto;
+  }
+  input {
+    border: 0;
+    border-bottom: 2px solid #fff;
+    line-height: 2;
+    width: 100%;
+    padding-left: 30px;
+    color: #fff;
+    &.login-id {
+      background: transparent url('../images/icon_id.png') no-repeat left top;
+    }
+    &.login-pw {
+      background: transparent url('../images/icon_pw.png') no-repeat left top;
+    }
+  }
+  p {
+    font-size: rem(16px);
+  }
+}
+.entry-section {
+  height: 100vh;
+}
+.entry-cells {
+  background: url('../images/loginBg.jpg') no-repeat center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .cell {
+    width: 10%;
+    height: 10%;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 50%;
+      background-color: $color-white;
+      animation-name: pulse;
+      animation-iteration-count: infinite;
+    }
+  }
+  @for $i from 0 through 100 {
+    .cell-#{$i}:after {
+      left: #{random(100)} + '%';
+      top: #{random(100)} + '%';
+      animation-duration: #{(random(100) + 100) / 100}s;
+      animation-delay: #{random(100) / 100}s;
+    }
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#fff, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 0.8rem rgba(#fff, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#fff, 0);
+  }
+}

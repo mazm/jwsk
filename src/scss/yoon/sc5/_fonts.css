@@ -1,0 +1,49 @@
+@charset "utf-8";
+@font-face {
+  font-family: "Noto-Thin";
+  src: url("../../lib/fonts/NotoSansKR-Thin.eot"); /* IE9 Compat Modes */
+  src: url("../../lib/fonts/NotoSansKR-Thin.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+  src: local(※), 	url("../../lib/fonts/NotoSansKR-Thin.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto-Light";
+  src: url("../../lib/fonts/NotoSansKR-Light.eot"); /* IE9 Compat Modes */
+  src: url("../../lib/fonts/NotoSansKR-Light.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+  src: local(※), url("../../lib/fonts/NotoSansKR-Light.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto-Regular';
+  src: url("../../lib/fonts/NotoSansKR-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../../lib/fonts/NotoSansKR-Regular.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+  src: local(※), url("../../lib/fonts/NotoSansKR-Regular.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto-Medium';
+  src: url("../../lib/fonts/NotoSansKR-Medium.eot"); /* IE9 Compat Modes */
+  src: url("../../lib/fonts/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+  src: local(※), 	url("../../lib/fonts/NotoSansKR-Medium.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto-Bold';
+  src: url("../../lib/fonts/NotoSansKR-Bold.eot"); /* IE9 Compat Modes */
+  src: url("../../lib/fonts/NotoSansKR-Bold.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+  src: local(※), url("../../lib/fonts/NotoSansKR-Bold.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto-Black';
+  src: url("../../lib/fonts/NotoSansKR-Black.eot"); /* IE9 Compat Modes */
+  src: url("../../lib/fonts/NotoSansKR-Black.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+  src: local(※), url("../../lib/fonts/NotoSansKR-Black.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

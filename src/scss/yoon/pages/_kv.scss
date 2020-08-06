@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* ------------------------- Key Visual  ------------------------- */
+.kv {
+	width: 100%;
+	margin: 0 auto;
+	//min-height: 270px;
+	//min-height: 320px;
+	height: 320px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	background: image('kv/kv_dept.jpg') no-repeat center top transparent;
+	background-size: cover;
+	img {
+		width: 100%;
+		height: 320px;
+	}
+	&--inner {
+		position: absolute;
+		width: $layWidth;
+		left: 50%;
+		top: 55%;
+		transform: translate(-50%, -55%);
+		color: #fff;
+		strong {
+			@include font-size(4.4);
+			margin-bottom: 20px;
+			display: block;
+		}
+		p {
+			@include font-size(1.6);
+			line-height: 1.8;
+			//width: 550px;
+			margin: 0 auto;
+		}
+		.kv__dept {
+			width: 1024px;
+			margin: 0 auto;
+			height: 156px;
+			padding-top: 20px;
+			//background-color: $dept-color-t1;
+			strong {
+				@include font-size(3.8);
+				@include Noto-Regular;
+				display: block;
+			}
+			.tag-list {
+				text-align: center;
+				a {
+					border: 1px solid rgba(255, 255, 255, 0.5);
+					border-radius: 20px;
+					color: #fff;
+					@include font-size(1.4);
+					display: inline-block;
+					padding: 5px 15px;
+					margin-left: 10px;
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	&.kv--bot {
+		.kv--inner {
+			top: auto;
+			transform: translateX(-50%);;
+			bottom: 0;
+		}
+	}
+	//$kv: (
+	//	'kv-intro': kv-intro,
+	//	'kv-ac': kv-ac,
+	//	'kv-lab': kv-lab,
+	//	'kv-support': kv-support,
+	//	'kv-campus': kv-campus
+	//);
+	//@each $name, $url in $kv {
+	//	&.#{$name} {
+	//		background: image('kv/#{$url}.jpg') no-repeat center top transparent;
+	//		background-size: cover;
+	//		&--inner {
+	//			.kv__dept {
+	//				background-color: $dept-color-t1;
+	//			}
+	//		}
+	//	}
+	//}
+}
