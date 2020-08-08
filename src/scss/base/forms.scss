@@ -17,9 +17,9 @@ input[type='password'],
 textarea {
   appearance: none;
   box-sizing: border-box;
-  font-family: var(--form-font-family);
+    @include Noto-Regular;
   border-radius: 0;
-  border: 0.1rem solid $color-grey;
+  border: 0.1rem solid $color-white;
   padding: $btn-padding;
 
   &:focus {
@@ -27,7 +27,7 @@ textarea {
   }
 
   @include placeholder {
-    color: $color-grey;
+    color: $color-white;
   }
 }
 

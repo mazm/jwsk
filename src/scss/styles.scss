@@ -2,20 +2,22 @@
 // will be correctly compiled during `gulp` and `gulp production`
 
 //* Vendors *//
-@import './node_modules/include-media/dist/include-media';
-
+//@import './node_modules/include-media/dist/include-media';
+//@import './node_modules/sass-mq/mq';
 
 //* Abstracts modules *//
-@import 'abstracts/main';
+@import 'abstracts/index';
 
 //* Base modules *//
-@import 'base/main';
+@import 'base/index';
 
 //* Layout modules *//
-@import 'layout/main';
+@import 'layout/index';
 
 //* Pages modules *//
-@import 'pages/main';
+@import 'pages/index';
 
 //* Components *//
-@import 'components/main';
+@import 'components/index';
+
+

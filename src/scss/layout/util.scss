@@ -1,0 +1,307 @@
+// This is the main with imports from components folder.
+.menu {
+    &.pc {
+        display: none;
+        @include mq(sm) {
+            display: block;
+        }
+    }
+    &.mobile {
+        display: block;
+        @include mq(sm) {
+            display: none;
+        }
+    }
+}
+.util-wrap {
+    @include fs(font-size, 320px, 1200px, 12px, 14px);
+    background: #fafafa;
+    border-bottom: 1px solid #dfdfdf;
+    width: 100%;
+    overflow: hidden;
+    .util {
+        float: right;
+        > li {
+            float: left;
+            padding: 13px 0 13px 10px;
+            //a { display: block;}
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 12px;
+                background: #ccc;
+                margin-right: 10px;
+            }
+            &:first-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .inner {
+        background: #fafafa;
+    }
+}
+.logo-top {
+    @include fs(font-size, 320px, 1200px, 12px, 14px);
+    padding-top: 25px !important;
+    padding-bottom: 15px !important;
+    & > strong {
+        float: left;
+    }
+    .my-info {
+        float: right;
+        li {
+            float: left;
+            line-height: 35px;
+            margin-left: 15px;
+            a {
+                display: block;
+            }
+        }
+    }
+}
+.point:before {
+    content: '';
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: image('icon_point.png') no-repeat left top;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.mileage:before {
+    content: '';
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: image('icon_mileage.png') no-repeat left top;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.nav-wrap {
+    width: 100%;
+    border-bottom: 2px solid #1388b9;
+    margin: 20px 0 15px;
+    @include fs(font-size, 320px, 1200px, 12px, 16px);
+    .nav {
+        width: 100%;
+        overflow: hidden;
+        & > li {
+            float: left;
+            width: calc(100% / 6);
+            text-align: center;
+            @include Noto-Bold;
+            padding: 10px 0;
+            a {
+                display: block;
+            }
+        }
+    }
+}
+.inner, .contents {
+    max-width: 1120px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    padding: 0 1rem;
+    @include mq(1120px) {
+        padding: 0;
+    }
+}
+
+//.contents {
+//    margin-top: 60px;
+//    @include mq(sm) {
+//        margin-top: 0;
+//    }
+//}
+.main-item {
+    @include fs(font-size, 320px, 1200px, 12px, 14px);
+    margin-bottom: 20px;
+    text-align: center;
+    & > li {
+        background: #fff;
+        border-radius: 2px;
+        display: inline-block;
+        height: 150px;
+        margin: 1rem;
+        position: relative;
+        width: 90%;
+
+        @include fs(padding, 20rem, 75rem, .5rem, 1rem);
+        border: 1px solid rgba(0,0,0,0.12);
+        box-shadow: 0 0px 0px rgba(0,0,0,0.12),
+                    0 0px 0px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                        0 10px 10px rgba(0,0,0,0.22);
+        }
+        strong {
+            @include fs(font-size, 320px, 1200px, 16px, 20px);
+            @include fs(margin-bottom, 20rem, 75rem, .5rem, 1rem);
+            display: block;
+        }
+        p {
+            @include fs(font-size, 320px, 1200px, 14px, 16px);
+        }
+        @include mq(618px) {
+            width: 45%;
+            height: 200px;
+        }
+        @include mq(952px) {
+            width: 30%;
+        }
+
+    }
+}
+.btn-wrap {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    position: relative;
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+    &:hover {
+        border: 1px solid #fff;
+    }
+    &.full {
+        width: 100%;
+    }
+    &.three {
+        width: 30%;
+    }
+    &.half {
+        width: 45%;
+    }
+    span{
+        display: block;
+        padding: 10px 10px;
+    }
+}
+.btn::before, .btn::after{
+    content:"";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #1388b9;
+}
+
+span::before, span::after{
+    content:"";
+    width:2px;
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #1388b9;
+}
+.btn:hover::before, .btn:hover::after{
+    width: 100%;
+}
+.btn:hover span::before, .btn:hover span::after{
+    height: 100%;
+
+}
+/*----- button 4 -----*/
+.btn-line::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+.btn-line span::after{
+    right:0;
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+.btn-line::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+.btn-line span::before{
+    left: 0;
+    top: 0;
+    transition-duration: 0.4s;
+}
+.bxslider {
+    //.kv {
+    //    @include aspect-ratio(16, 9);
+    //}
+    .pos {
+        position: absolute;
+        width: 70%;
+        color: #fff;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        strong {
+            @include fs(font-size, 320px, 1200px, 20px, 60px);
+            letter-spacing: -1px;
+            text-shadow: 0.1rem 0.5rem 0.5rem rgba(255, 255, 255, 0.3);
+            display: block;
+            @include fs((margin-bottom), 20rem, 75rem, 0rem, .5rem);
+        }
+        //p {
+        //    display: none;
+        //    @include mq(sm) {
+        //        display: block;
+        //    }
+        //}
+        @include mq(sm) {
+            left: 5%;
+            width: 55%;
+        }
+    }
+}
+.bx-wrapper img {
+    //border-bottom-left-radius: 20px;
+    //border-bottom-right-radius: 20px;
+    //@include mq(sm) {
+    //    border-top-left-radius: 20px;
+    //    border-bottom-right-radius: 20px;
+    //    border-bottom-left-radius: 0;
+    //}
+}
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0 #ccc;
+    -webkit-box-shadow: 0 0 0 #ccc;
+    box-shadow: 0 0 0 #ccc;
+    border: 0;
+    background: #fff;
+    margin-bottom: 1rem;
+}
+.bx-wrapper .bx-pager {
+    color: #fff;
+}
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 20px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: orange;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #fff;
+}
+.bx-controls {
+    display: none;
+    @include mq(sm) {
+        display: block;
+    }
+}
+

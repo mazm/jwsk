@@ -1,0 +1,189 @@
+/*
+html {
+    @include fs(font-size, 320px, 1200px, 12px, 16px);
+}
+h1,h2,h3,h4,h5 {
+    @include fs((padding-top, padding-bottom), 20rem, 75rem, 0rem, .5rem);
+}
+*/
+.kv-wrap {
+    padding: 0;
+    max-width: 1120px;
+    margin: 60px auto 1rem;
+    @include mq(sm) {
+        margin: 0 auto 1rem;
+        padding: 0;
+    }
+    @include mq(1120px) {
+        padding: 0;
+    }
+}
+.kv {
+    .pc {
+        display: none;
+        @include mq(sm) {
+            display: block;
+        }
+    }
+    .mo {
+        display: block;
+        @include mq(sm) {
+            display: none;
+        }
+    }
+}
+.kv-noti {
+    position: relative;
+    margin-bottom: 1rem;
+    .kv {
+        position: relative;
+    }
+    .pos {
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        @include mq(sm) {
+            left: 30%;
+        }
+        .tit-noti {
+            @include fs(font-size, 320px, 1200px, 20px, 60px);
+            letter-spacing: -1px;
+            text-shadow: 0.1rem 0.5rem 0.5rem rgba(255, 255, 255, 0.3);
+            display: block;
+            @include fs((margin-bottom), 20rem, 75rem, 0rem, .5rem);
+        }
+        dt {
+            @include fs(font-size, 320px, 1200px, 14px, 20px);
+            color: $pcolor;
+            @include Noto-Bold;
+            vertical-align: top;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background: image('icon_noti.png') no-repeat left top;
+                margin-right: 10px;
+                vertical-align: top;
+            }
+        }
+        dd {
+            strong {
+                @include Noto-Regular;
+                color: $pcolor;
+                @include fs(font-size, 320px, 1200px, 12px, 14px);
+
+            }
+
+        }
+    }
+}
+.pcolor {
+    color: $pcolor;
+}
+.grid-wrap {
+    .character {
+        text-align: center;
+        padding: 2rem 0 1rem;
+        border: 1px solid rgba(0,0,0,0.12);
+        box-shadow: 0 0px 0px rgba(0,0,0,0.12),
+        0 0px 0px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+            0 10px 10px rgba(0,0,0,0.22);
+        }
+    }
+    .rig {
+        list-style: none;
+        font-size: 0;
+        margin-left: -2%;
+        > li {
+            display: inline-block;
+            padding: 0;
+            margin: 0 0 10% 2%;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: calc(50% - 2%);
+            @include mq(sm) {
+                width: calc(25% - 2%);
+            }
+        }
+        dt {
+            @include fs(font-size, 320px, 1200px, 12px, 18px);
+            @include Noto-Bold;
+            margin: 1rem 0;
+        }
+        dd {
+            @include fs(font-size, 320px, 1200px, 12px, 16px);
+            @include Noto-Light;
+            @include ellipsis;
+            width: 100%;
+            &.btn-list {
+                margin-top: 2rem;
+                text-align: center;
+            }
+        }
+
+    }
+
+}
+.btn-ani {
+    @include Noto-Regular;
+    border: none;
+    //border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0px 40px;
+    display: inline-block;
+    //margin: 15px 30px;
+    text-transform: uppercase;
+    line-height: 2.7em;
+    font-weight: 600;
+    font-size: 1rem;
+    outline: none;
+    position: relative;
+    font-size: 16px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        bottom: 50%;
+        left: 0;
+        border-radius: inherit;
+        background-color: rgba(255, 255, 255, 0.15);
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+        background-color: inherit;
+        border-radius: 10px;
+        z-index: -1;
+        box-shadow: inset 0 -6px 10px rgba(0, 0, 0, 0.75);
+    }
+    &:hover:after,
+    &.hover:after {
+        top: 0;
+        bottom: 0;
+    }
+    &.orange {
+        background-color: #e96303;
+    }
+    &.blue {
+        background-color: #1388b9;
+    }
+}

@@ -59,7 +59,7 @@
   .#{$child-name1}{
     display: table-cell;
     vertical-align: $valign;
-    width: $width1; 
+    width: $width1;
   }
   .#{$child-name2} {
     display: table-cell;
@@ -121,7 +121,7 @@
 /// values—foreground-color background-color.
 /// @link http://bourbon.io/docs/#triangle
 /// @param $size - argument can take one or two values—width height
-/// @param $color - argument can take one or two 
+/// @param $color - argument can take one or two
 /// @param $direction - value: up, down, left, right, up-right, up-left, down-right, down-left
 /// @example @include triangle(12px, gray, down);
 /// @include triangle(12px 6px, gray blue, up-left);
@@ -236,7 +236,7 @@ $animation-speed: 0.3s !default;
   position: absolute;
   top: 50%;
   left: 50%;
-  
+
   @if not $width and not $height {
     transform: translate(-50%, -50%);
   } @else if $width and $height {
@@ -252,4 +252,106 @@ $animation-speed: 0.3s !default;
     margin-top: -($height / 2);
     transform: translateX(-50%);
   }
+}
+
+//<div class="sixteen-nine">
+//  <div class="content">
+//      insert content here
+//      this will maintain a 16:9 aspect ratio
+//  </div>
+//</div>
+//    .sixteen-nine {
+//        @include aspect-ratio(16, 9);
+//    }
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > .ratio {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+// Fluid Type Sass Mixin
+//
+// https://codepen.io/MadeByMike/pen/vNrvdZ
+// I'm now recommending this technique:
+
+@mixin fs($properties, $min-screen, $max-screen, $min-value, $max-value) {
+    & {
+        @each $property in $properties {
+            #{$property}: $min-value;
+        }
+
+        @media screen and (min-width: $min-screen) {
+            @each $property in $properties {
+                #{$property}: calc-interpolation($min-screen, $min-value, $max-screen, $max-value);
+            }
+        }
+
+        @media screen and (min-width: $max-screen) {
+            @each $property in $properties {
+                #{$property}: $max-value;
+            }
+        }
+    }
+}
+
+// Requires the calc-interpolation function which can also be used independently
+
+@function calc-interpolation($min-screen, $min-value, $max-screen, $max-value) {
+    $a: ($max-value - $min-value) / ($max-screen - $min-screen);
+    $b: $min-value - $a * $min-screen;
+
+    $sign: "+";
+    @if ($b < 0) {
+        $sign: "-";
+        $b: abs($b);
+    }
+    @return calc(#{$a*100}vw #{$sign} #{$b});
+}
+
+// Indrek Pass also has a fantastic mixin here: http://sassmeister.com/gist/7f22e44ace49b5124eec
+
+@mixin gridlist($leftmargin, $topmargin ) {
+    .rig {
+        list-style: none;
+        font-size: 0;
+        margin-left: -$leftmargin;
+        > li {
+            display: inline-block;
+            padding: 0;
+            margin: 0 0 $topmargin $leftmargin;
+            //background: #fff;
+            vertical-align: top;
+            box-sizing: border-box;
+            //overflow: hidden;
+            font-size: 16px;
+            figure {
+                text-align: center;
+                figcaption {
+                    margin: 5px 0;
+                }
+            }
+        }
+        &.columns-2 > li {
+            width: calc(50% - #{$leftmargin});
+        }
+        &.columns-3 > li {
+            width: calc(33.333% - #{$leftmargin});
+        }
+        &.columns-4 > li {
+            width: calc(25% - #{$leftmargin});
+        }
+        &.columns-5 > li {
+            width: calc(20% - #{$leftmargin});
+        }
+    }
 }

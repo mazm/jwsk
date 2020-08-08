@@ -1,0 +1,34 @@
+// This is the main with imports from components folder.
+
+footer {
+    background: #333333;
+    color: #fff;
+    .inner {
+        background: #333;
+        padding: 1rem;
+        @include mq(620px) {
+            padding: 2rem 1rem;
+        }
+    }
+    .foot-logo {
+        display: none;
+        @include mq(620px) {
+            display: block;
+            float: left;
+        }
+    }
+    .copyright {
+         padding-top: 10px;
+        text-align: center;
+        @include fs(font-size, 320px, 1200px, 12px, 14px);
+        p {
+            margin: 0; padding: 0;
+        }
+        @include mq(620px) {
+            padding-top: 0;
+            float: right;
+            width: 80%;
+            text-align: left;
+        }
+    }
+}
