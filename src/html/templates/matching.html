@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../partials/head/head.html')
+<body>
+
+<div class="wrapper">
+    @@include('../partials/include/header.html')
+    <!-- Start  noti box -->
+    @@include('../partials/components/noti-matching.html')
+    <!-- End  noti box -->
+    <div class="contents">
+        <h1 class="tit">매칭정보 <span>(Matching Information)</span></h1>
+        <!-- Start  Tab -->
+        <ul class="tabstyle">
+            <li><a href="matching_s.html">판매현황</a></li>
+            <li class="current"><a href="matching.html">구매현황역</a></li>
+        </ul>
+        <!-- End  Tab -->
+        <!-- Start  내역 -->
+        @@include('../partials/components/status-table.html')
+        <!-- End  내역 -->
+        <div class="grid-wrap hor">
+            <ul class="rig">
+                <li>
+                    <div class="character"><img src="@@webRoot/images/cha_1.png" alt=""></div>
+                    <dl>
+                        <dt>(산)양자리(Aries)<br>A01_123456789012</dt>
+                        <dd>구매일시: 2020-07-24 13:07</dd>
+                        <dd>가격: 233,000원</dd>
+                        <dd class="line">다음매칭: 2020-07-28</dd>
+                        <dd>예상가격: 261,700원</dd>
+                        <dd class="btn-list">
+                            <a class="efBtn btn-orange reserve-ing" href="#" title="Learn More">예약중</a><br>
+                            <a class="efBtn btn-blue reserve-cancel" href="#" title="Learn More">예약취소</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="character"><img src="@@webRoot/images/cha_2.png" alt=""></div>
+                    <dl>
+                        <dt>황소자리(Taurus)<br>A01_123456789012</dt>
+                        <dd>구매일시: 2020-07-24 13:07</dd>
+                        <dd>가격: 233,000원</dd>
+                        <dd class="line">다음매칭: 2020-07-28</dd>
+                        <dd>예상가격: 261,700원</dd>
+                        <dd class="btn-list"><a href="#" class="efBtn btn-blue reserve">예약하기</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="character"><img src="@@webRoot/images/cha_3.png" alt=""></div>
+                    <dl>
+                        <dt>사자자리(Leo)<br>A01_123456789012</dt>
+                        <dd>구매일시: 2020-07-24 13:07</dd>
+                        <dd>가격: 233,000원</dd>
+                        <dd class="line">다음매칭: 2020-07-28</dd>
+                        <dd>예상가격: 261,700원</dd>
+                        <dd class="btn-list"><a href="#" class="efBtn btn-blue">예약하기</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="character"><img src="@@webRoot/images/cha_4.png" alt=""></div>
+                    <dl>
+                        <dt>전갈자리(Scorpius)<br>A01_123456789012</dt>
+                        <dd>구매일시: 2020-07-24 13:07</dd>
+                        <dd>가격: 233,000원</dd>
+                        <dd class="line">다음매칭: 2020-07-28</dd>
+                        <dd>예상가격: 261,700원</dd>
+                        <dd class="btn-list"><a href="#" class="efBtn btn-blue">예약하기</a></dd>
+                    </dl>
+                </li>
+                <li>
+                    <div class="character"><img src="@@webRoot/images/cha_5.png" alt=""></div>
+                    <dl>
+                        <dt>궁수자리(Sagittarius)<br>A01_123456789012</dt>
+                        <dd>구매일시: 2020-07-24 13:07</dd>
+                        <dd>가격: 233,000원</dd>
+                        <dd class="line">다음매칭: 2020-07-28</dd>
+                        <dd>예상가격: 261,700원</dd>
+                        <dd class="btn-list"><a href="#" class="efBtn btn-orange reserve-cancel">예약취소</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <!-- Start  페이징 -->
+        @@include('../partials/components/paging.html')
+        <!-- End  페이징 -->
+     </div>
+    @@include('../partials/include/footer.html')
+</div>
+
+@@include('../partials/scripts/common.html')
+
+</body>
+</html>

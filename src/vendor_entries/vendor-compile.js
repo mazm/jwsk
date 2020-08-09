@@ -11,8 +11,6 @@ $(document).ready(() => {
   //     header = document.querySelector('.header');
   $('.burger-container').on('click', function() {
       $('.header').toggleClass('menu-opened');
+      $('.wrapper').toggleClass('menu-opened');
   })
-  // burger.onclick = function() {
-  //   header.classList.toggle('menu-opened');
-  // };
-});
+ });

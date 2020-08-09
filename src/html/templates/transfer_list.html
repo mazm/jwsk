@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../partials/head/head.html')
+<body>
+
+<div class="wrapper">
+    @@include('../partials/include/header.html')
+    @@include('../partials/components/noti-point.html')
+    <div class="contents">
+        <h1 class="tit">별 포인트<span>(Star Point)</span></h1>
+        <!-- Start  내역 -->
+        @@include('../partials/components/status.html')
+        <!-- End  내역 -->
+        <!-- Start  Tab -->
+        <ul class="tabstyle">
+            <li><a href="charge.html">구매</a></li>
+            <li><a href="charge_list.html">구매내역</a></li>
+            <li><a href="transfer.html">보내기</a></li>
+            <li class="current"><a href="transfer_list.html">보내기 내역</a></li>
+        </ul>
+        <!-- Start 추천인 -->
+        <div class="table-top"><i class="fa fa-exclamation-circle"></i> 아이디를 클릭하시면 별포인트 보내기가 가능합니다.</div>
+        <div class="tbl-list">
+            <table>
+                <thead>
+                <tr>
+                    <th class="not-mo">No</th>
+                    <th>보낸사람</th>
+                    <th>포인트</th>
+                    <th>받은사람</th>
+                    <th>일시</th>
+                    <th>상태</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="not-mo"> 1</td>
+                    <td><a href="transfer.html"><strong>seafar0520 <i class="fa fa-sign-out"></i></strong></a> </td>
+                    <td>500  p</td>
+                    <td>ajabtto</td>
+                    <td>20.08.08 17:10:45</td>
+                    <td><strong style="color:#4d43fa;"><i class="fa fa-sign-in"></i> 받기 </strong> </td>
+                </tr>
+                <tr>
+                    <td class="not-mo"> 2</td>
+                    <td><a href="transfer.html"><strong>seafar0520 <i class="fa fa-sign-out"></i></strong></a> </td>
+                    <td>500  p</td>
+                    <td>ajabtto</td>
+                    <td>20.08.07 13:30:58</td>
+                    <td><strong style="color:#4d43fa;"><i class="fa fa-sign-in"></i> 받기</strong> </td>
+                </tr>
+                <tr>
+                    <td class="not-mo"> 3</td>
+                    <td><a href="transfer.html"><strong>seafar0520 <i class="fa fa-sign-out"></i></strong></a> </td>
+                    <td>1,000  p</td>
+                    <td>ajabtto</td>
+                    <td>20.08.01 13:58:38</td>
+                    <td><strong style="color:#4d43fa;"><i class="fa fa-sign-in"></i> 받기</strong> </td>
+                </tr>
+                 </tbody>
+            </table>
+        </div>
+        <!-- End 추천인 -->
+        <!-- Start  페이징 -->
+        @@include('../partials/components/paging.html')
+        <!-- End  페이징 -->
+     </div>
+    @@include('../partials/include/footer.html')
+</div>
+
+@@include('../partials/scripts/common.html')
+
+</body>
+</html>

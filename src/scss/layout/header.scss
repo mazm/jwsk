@@ -3,6 +3,7 @@
 footer {
     background: #333333;
     color: #fff;
+    margin-top: 2rem;
     .inner {
         background: #333;
         padding: 1rem;
@@ -20,7 +21,7 @@ footer {
     .copyright {
          padding-top: 10px;
         text-align: center;
-        @include fs(font-size, 320px, 1200px, 12px, 14px);
+        @include fs(font-size, 320px, 1200px, 9px, 14px);
         p {
             margin: 0; padding: 0;
         }

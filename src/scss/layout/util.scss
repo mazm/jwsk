@@ -163,81 +163,82 @@
     left: 10px;
     right: 10px;
     bottom: 20px;
-}
-.btn {
-    display: inline-block;
-    position: relative;
-    background: none;
-    border: none;
-    color: #222;
-    font-size: 14px;
-    cursor: pointer;
-    margin: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    text-align: center;
-    &:hover {
-        border: 1px solid #fff;
+    .btn {
+        display: inline-block;
+        position: relative;
+        background: none;
+        border: none;
+        color: #222;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 0;
+        background: #fff;
+        border: 1px solid #ccc;
+        text-align: center;
+        &:hover {
+            border: 1px solid #fff;
+        }
+        &.full {
+            width: 100%;
+        }
+        &.three {
+            width: 30%;
+        }
+        &.half {
+            width: 45%;
+        }
+        span{
+            display: block;
+            padding: 10px 10px;
+        }
+        span::before, span::after{
+            content:"";
+            width:2px;
+            height:0;
+            position: absolute;
+            transition: all 0.2s linear;
+            background: #1388b9;
+        }
     }
-    &.full {
+    .btn::before, .btn::after{
+        content:"";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        transition: all 0.2s linear;
+        background: #1388b9;
+    }
+
+    .btn:hover::before, .btn:hover::after{
         width: 100%;
     }
-    &.three {
-        width: 30%;
+    .btn:hover span::before, .btn:hover span::after{
+        height: 100%;
+
     }
-    &.half {
-        width: 45%;
+    /*----- button 4 -----*/
+    .btn-line::after{
+        right:0;
+        bottom: 0;
+        transition-duration: 0.4s;
     }
-    span{
-        display: block;
-        padding: 10px 10px;
+    .btn-line span::after{
+        right:0;
+        bottom: 0;
+        transition-duration: 0.4s;
     }
-}
-.btn::before, .btn::after{
-    content:"";
-    width: 0;
-    height: 2px;
-    position: absolute;
-    transition: all 0.2s linear;
-    background: #1388b9;
+    .btn-line::before{
+        left: 0;
+        top: 0;
+        transition-duration: 0.4s;
+    }
+    .btn-line span::before{
+        left: 0;
+        top: 0;
+        transition-duration: 0.4s;
+    }
 }
 
-span::before, span::after{
-    content:"";
-    width:2px;
-    height:0;
-    position: absolute;
-    transition: all 0.2s linear;
-    background: #1388b9;
-}
-.btn:hover::before, .btn:hover::after{
-    width: 100%;
-}
-.btn:hover span::before, .btn:hover span::after{
-    height: 100%;
-
-}
-/*----- button 4 -----*/
-.btn-line::after{
-    right:0;
-    bottom: 0;
-    transition-duration: 0.4s;
-}
-.btn-line span::after{
-    right:0;
-    bottom: 0;
-    transition-duration: 0.4s;
-}
-.btn-line::before{
-    left: 0;
-    top: 0;
-    transition-duration: 0.4s;
-}
-.btn-line span::before{
-    left: 0;
-    top: 0;
-    transition-duration: 0.4s;
-}
 .bxslider {
     //.kv {
     //    @include aspect-ratio(16, 9);

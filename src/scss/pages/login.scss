@@ -46,6 +46,53 @@
             background: transparent url('../images/icon_pw.png') no-repeat left top;
         }
     }
+    $cp-cs-select: 'cs-select';
+    .#{$cp-cs-select} {
+        display: inline-block;
+        width: 30%;
+        position: relative;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.1);
+        select {
+            width: 100%;
+            font-family: inherit;
+            border: none;
+            padding: 0 10px;
+            background-color: transparent;
+            //background: image('cs_select.png') no-repeat right center;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: #fff;
+            height: 36px;
+            vertical-align: middle;
+        }
+        // IE 10, 11 네이티브화살표 숨기기
+        select::-ms-expand {
+            display: none;
+        }
+        //&:before {
+        //	content: "";
+        //	position: absolute;
+        //	top: 6px;
+        //	right: 10px;
+        //	width: 0;
+        //	height: 0;
+        //	margin-top: 0;
+        //	border-left: 5px solid transparent;
+        //	border-right: 5px solid transparent;
+        //	border-top: 5px solid $clight;
+        //}
+        &__disabled {
+            select {
+                border: 1px solid #D6D6D6;
+                color: #fff;
+            }
+        }
+        &.full {
+            width: 100%;
+        }
+    }
 }
 .login-form { min-height: 380px; }
 .login-wrap { min-height: 430px; }
@@ -245,50 +292,4 @@
     margin-top: -55px;
     text-align: center;
 }
-$cp-cs-select: 'cs-select';
-.#{$cp-cs-select} {
-    display: inline-block;
-    width: 30%;
-    position: relative;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.1);
-    select {
-        width: 100%;
-        font-family: inherit;
-        border: none;
-        padding: 0 10px;
-        background-color: transparent;
-        //background: image('cs_select.png') no-repeat right center;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        color: #fff;
-        height: 36px;
-        vertical-align: middle;
-    }
-    // IE 10, 11 네이티브화살표 숨기기
-    select::-ms-expand {
-        display: none;
-    }
-    //&:before {
-    //	content: "";
-    //	position: absolute;
-    //	top: 6px;
-    //	right: 10px;
-    //	width: 0;
-    //	height: 0;
-    //	margin-top: 0;
-    //	border-left: 5px solid transparent;
-    //	border-right: 5px solid transparent;
-    //	border-top: 5px solid $clight;
-    //}
-    &__disabled {
-        select {
-            border: 1px solid #D6D6D6;
-            color: #fff;
-        }
-    }
-    &.full {
-        width: 100%;
-    }
-}
+

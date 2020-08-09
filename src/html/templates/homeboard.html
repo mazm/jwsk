@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../partials/head/head.html')
+<body>
+
+<div class="wrapper">
+    @@include('../partials/include/header.html')
+    <div class="contents">
+        <h1 class="tit">고객센터<span>(Customer Center)</span></h1>
+        <!-- Start  Tab -->
+        <ul class="tabstyle">
+            <li class="current"><a href="homeboard.html">공지사항</a></li>
+            <li><a href="center.html">1:1문의</a></li>
+        </ul>
+        <!-- Start 추천인 -->
+        <div class="tbl-list">
+            <table>
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>공지</td>
+                    <td><a href="#">★★★  SEA WORLD 규칙  ★★★</a></td>
+                    <td>관리자</td>
+
+                </tr>
+                <tr>
+                    <td>공지</td>
+                    <td><a href="#">★★★  SEA WORLD 규칙  ★★★</a></td>
+                    <td>관리자</td>
+
+                </tr>
+                <tr>
+                    <td>공지</td>
+                    <td><a href="#">★★★  SEA WORLD 규칙  ★★★</a></td>
+                    <td>관리자</td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- End 추천인 -->
+        <!-- Start  페이징 -->
+        @@include('../partials/components/paging.html')
+        <!-- End  페이징 -->
+        
+     </div>
+    @@include('../partials/include/footer.html')
+</div>
+
+@@include('../partials/scripts/common.html')
+
+</body>
+</html>

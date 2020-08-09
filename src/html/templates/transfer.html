@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../partials/head/head.html')
+<body>
+
+<div class="wrapper">
+    @@include('../partials/include/header.html')
+    @@include('../partials/components/noti-give-point.html')
+    <div class="contents">
+        <h1 class="tit">별 포인트<span>(Star Point)</span></h1>
+        <!-- Start  내역 -->
+        @@include('../partials/components/status.html')
+        <!-- End  내역 -->
+        <!-- Start  Tab -->
+        <ul class="tabstyle">
+            <li><a href="charge.html">구매</a></li>
+            <li><a href="charge_list.html">구매내역</a></li>
+            <li class="current"><a href="transfer.html">보내기</a></li>
+            <li><a href="transfer_list.html">보내기 내역</a></li>
+        </ul>
+        
+        <div class="tbl-list alL">
+            <table>
+                <tr>
+                    <th>보낼 별 포인트</th>
+                    <td>
+                        <div style="margin-bottom: 10px;"><input type="text" class="inbox" id="in-point"> <label for="in-point">P</label></div>
+                        <div>
+                            <a href="market.html" class="line-btn">50</a>
+                            <a href="market.html" class="line-btn">100</a>
+                            <a href="market.html" class="line-btn">200</a>
+                            <a href="market.html" class="line-btn">300</a>
+                            <a href="market.html" class="line-btn">4000</a>
+                            <a href="market.html" class="line-btn">1000</a>
+                            <a href="market.html" class="line-btn dark">정정</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>받을 아이디</th>
+                    <td><input type="text" class="inbox"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="btn-list alC">
+            <a href="#" class="efBtn btn-orange reserve">별 포인트 보내기</a>
+        </div>
+    </div>
+    @@include('../partials/include/footer.html')
+</div>
+
+@@include('../partials/scripts/common.html')
+
+</body>
+</html>

@@ -6,10 +6,18 @@ h1,h2,h3,h4,h5 {
     @include fs((padding-top, padding-bottom), 20rem, 75rem, 0rem, .5rem);
 }
 */
+.wrapper {
+    &.menu-opened {
+        .kv-wrap,
+        .contents {
+            margin-top: 60px;
+        }
+    }
+}
 .kv-wrap {
     padding: 0;
     max-width: 1120px;
-    margin: 60px auto 1rem;
+    margin: 0 auto 1rem;
     @include mq(sm) {
         margin: 0 auto 1rem;
         padding: 0;
@@ -40,8 +48,8 @@ h1,h2,h3,h4,h5 {
     }
     .pos {
         position: absolute;
-        left: 5%;
-        right: 5%;
+        left: 2%;
+        right: 2%;
         top: 50%;
         transform: translateY(-50%);
         color: #fff;
@@ -56,134 +64,55 @@ h1,h2,h3,h4,h5 {
             @include fs((margin-bottom), 20rem, 75rem, 0rem, .5rem);
         }
         dt {
-            @include fs(font-size, 320px, 1200px, 14px, 20px);
+            @include fs(font-size, 320px, 1200px, 12px, 20px);
             color: $pcolor;
             @include Noto-Bold;
             vertical-align: top;
             &:before {
                 content: '';
                 display: inline-block;
-                width: 30px;
-                height: 30px;
+                width: 20px;
+                height: 20px;
                 background: image('icon_noti.png') no-repeat left top;
-                margin-right: 10px;
+                background-size: cover;
+                margin-right: 0.5rem;
                 vertical-align: top;
+                @include mq(sm) {
+                    width: 30px;
+                    height: 30px;
+                }
             }
         }
         dd {
+            @include fs(font-size, 320px, 1200px, 9px, 14px);
             strong {
                 @include Noto-Regular;
                 color: $pcolor;
-                @include fs(font-size, 320px, 1200px, 12px, 14px);
-
             }
-
         }
     }
 }
 .pcolor {
     color: $pcolor;
 }
-.grid-wrap {
-    .character {
-        text-align: center;
-        padding: 2rem 0 1rem;
-        border: 1px solid rgba(0,0,0,0.12);
-        box-shadow: 0 0px 0px rgba(0,0,0,0.12),
-        0 0px 0px rgba(0,0,0,0.24);
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        &:hover {
-            box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-            0 10px 10px rgba(0,0,0,0.22);
-        }
-    }
-    .rig {
-        list-style: none;
-        font-size: 0;
-        margin-left: -2%;
-        > li {
-            display: inline-block;
-            padding: 0;
-            margin: 0 0 10% 2%;
-            vertical-align: top;
-            box-sizing: border-box;
-            width: calc(50% - 2%);
-            @include mq(sm) {
-                width: calc(25% - 2%);
-            }
-        }
-        dt {
-            @include fs(font-size, 320px, 1200px, 12px, 18px);
-            @include Noto-Bold;
-            margin: 1rem 0;
-        }
-        dd {
-            @include fs(font-size, 320px, 1200px, 12px, 16px);
-            @include Noto-Light;
-            @include ellipsis;
-            width: 100%;
-            &.btn-list {
-                margin-top: 2rem;
-                text-align: center;
-            }
-        }
-
-    }
-
-}
-.btn-ani {
-    @include Noto-Regular;
-    border: none;
-    //border-radius: 5px;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 0px 40px;
-    display: inline-block;
-    //margin: 15px 30px;
-    text-transform: uppercase;
-    line-height: 2.7em;
-    font-weight: 600;
-    font-size: 1rem;
-    outline: none;
-    position: relative;
-    font-size: 16px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        bottom: 50%;
-        left: 0;
-        border-radius: inherit;
-        background-color: rgba(255, 255, 255, 0.15);
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-        -webkit-transform: translateY(5px);
-        transform: translateY(5px);
-        background-color: inherit;
-        border-radius: 10px;
-        z-index: -1;
-        box-shadow: inset 0 -6px 10px rgba(0, 0, 0, 0.75);
-    }
-    &:hover:after,
-    &.hover:after {
-        top: 0;
-        bottom: 0;
-    }
-    &.orange {
-        background-color: #e96303;
-    }
-    &.blue {
-        background-color: #1388b9;
+.tit {
+    //border-bottom: 2px solid $pcolor;
+    text-align: center;
+    @include fs(margin-bottom, 20rem, 70rem, .5rem, 2.5rem);
+    //text-shadow: 0 2px white, 0 3px #777;
+    //text-shadow: 0px 1px 0px rgb(204, 204, 204),
+    // 0px 2px 0px rgb(201, 201, 201),
+    // 0px 3px 0px rgb(187, 187, 187),
+    // 0px 4px 0px rgb(185, 185, 185),
+    // 0px 5px 0px rgb(170, 170, 170),
+    // 0px 6px 1px rgba(0, 0, 0, 0.1),
+    // 0px 0px 5px rgba(0, 0, 0, 0.1),
+    // 0px 1px 3px rgba(0, 0, 0, 0.3),
+    // 0px 3px 5px rgba(0, 0, 0, 0.2),
+    // 0px 5px 10px rgba(0, 0, 0, 0.25),
+    // 0px 20px 20px rgba(0, 0, 0, 0.15);
+    span {
+        color: $pcolor;
+        @include fs(font-size, 320px, 1120px, 12px, 22px);
     }
 }

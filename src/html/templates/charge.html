@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../partials/head/head.html')
+<body>
+
+<div class="wrapper">
+    @@include('../partials/include/header.html')
+    @@include('../partials/components/noti-point.html')
+    <div class="contents">
+        <h1 class="tit">별 포인트<span>(Star Point)</span></h1>
+        <!-- Start  내역 -->
+        @@include('../partials/components/status.html')
+        <!-- End  내역 -->
+        <!-- Start  Tab -->
+        <ul class="tabstyle">
+            <li class="current"><a href="charge.html">구매</a></li>
+            <li><a href="charge_list.html">구매내역</a></li>
+            <li><a href="transfer.html">보내기</a></li>
+            <li><a href="transfer_list.html">보내기 내역</a></li>
+        </ul>
+        <div class="tbl-list alL">
+            <table>
+                <tr>
+                    <th>입금자명</th>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <th>신청포인트</th>
+                    <td>
+                        <div style="margin-bottom: 10px;"><input type="text" class="inbox" id="in-point"> <label for="in-point">P</label></div>
+                        <div>
+                            <a href="market.html" class="line-btn">100</a>
+                            <a href="market.html" class="line-btn">200</a>
+                            <a href="market.html" class="line-btn">300</a>
+                            <a href="market.html" class="line-btn">500</a>
+                            <a href="market.html" class="line-btn">1000</a>
+                            <a href="market.html" class="line-btn">2000</a>
+                            <a href="market.html" class="line-btn dark">정정</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>입금금액</th>
+                    <td><input type="text" class="inbox" id="in-won"> <label for="in-won">원</label></td>
+                </tr>
+                <tr>
+                    <th>입금계좌</th>
+                    <td><strong class="accent">기업은행 298-12345699-22-22222 유한회사 스텔라</strong></td>
+                </tr>
+            </table>
+        </div>
+        <p class="cs-info"><i class="fa fa-exclamation-circle"></i>고객센터 운영시간(오전10시~오후8시) 이후에 신청은 익일 운영시간에 처리됩니다.</p>
+        <div class="btn-list alC">
+            <a href="#" class="efBtn btn-orange reserve">신청하기</a>
+        </div>
+     </div>
+    @@include('../partials/include/footer.html')
+</div>
+
+@@include('../partials/scripts/common.html')
+
+</body>
+</html>

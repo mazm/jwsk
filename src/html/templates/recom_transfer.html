@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('../partials/head/head.html')
+<body>
+
+<div class="wrapper">
+    @@include('../partials/include/header.html')
+    @@include('../partials/components/noti-mileage.html')
+    <div class="contents">
+        <h1 class="tit">추천인 <span>(Introducer List)</span></h1>
+        <!-- Start  내역 -->
+        @@include('../partials/components/status.html')
+        <!-- End  내역 -->
+        <!-- Start  Tab -->
+        <ul class="tabstyle">
+            <li><a href="introducer.html">추천인</a></li>
+            <li><a href="recomPoint_list.html">추천인마일리지</a></li>
+            <li class="current"><a href="recom_transfer.html">마일리지전환</a></li>
+        </ul>
+        <div class="table-top"><i class="fa fa-exclamation-circle"></i> 아이디를 클릭하시면 별포인트 보내기가 가능합니다.</div>
+        <div class="tbl-list">
+            <table>
+                <thead>
+                <tr>
+                    <th class="not-mo">No</th>
+                    <th class="not-mo">보낸사람</th>
+                    <th>포인트</th>
+                    <th>받은사람</th>
+                    <th>일시</th>
+                    <th>상태</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="not-mo"> 1</td>
+                    <td class="not-mo"><a href="transfer.php?g_id=seafar0520">seafar0520</a></td>
+                    <td>500 p</td>
+                    <td>ajabtto</td>
+                    <td>20.08.08 17:10:45</td>
+                    <td><strong style="color:#4d43fa;">받기</strong></td>
+                </tr>
+                <tr>
+                    <td class="not-mo"> 2</td>
+                    <td class="not-mo"><a href="transfer.php?g_id=seafar0520">seafar0520</a></td>
+                    <td>500 p</td>
+                    <td>ajabtto</td>
+                    <td>20.08.07 13:30:58</td>
+                    <td><strong style="color:#4d43fa;">받기</strong></td>
+                </tr>
+                <tr>
+                    <td class="not-mo"> 3</td>
+                    <td class="not-mo"><a href="transfer.php?g_id=seafar0520">seafar0520</a></td>
+                    <td>1,000 p</td>
+                    <td>ajabtto</td>
+                    <td>20.08.01 13:58:38</td>
+                    <td><strong style="color:#4d43fa;">받기</strong></td>
+                </tr>
+                <tr>
+                    <td class="not-mo"> 4</td>
+                    <td class="not-mo"><a href="transfer.php?g_id=seafar0520">seafar0520</a></td>
+                    <td>1,000 p</td>
+                    <td>ajabtto</td>
+                    <td>20.07.13 08:28:16</td>
+                    <td><strong style="color:#4d43fa;">받기</strong></td>
+                </tr>
+                <tr>
+                    <td class="not-mo"> 5</td>
+                    <td class="not-mo"><a href="transfer.php?g_id=seafar0520">seafar0520</a></td>
+                    <td>500 p</td>
+                    <td>ajabtto</td>
+                    <td>20.07.11 02:26:41</td>
+                    <td><strong style="color:#4d43fa;">받기</strong></td>
+                </tr>
+                <tr>
+                    <td class="not-mo"> 6</td>
+                    <td class="not-mo"><a href="transfer.php?g_id=seafar0520">seafar0520</a></td>
+                    <td>500 p</td>
+                    <td>ajabtto</td>
+                    <td>20.07.07 17:58:22</td>
+                    <td><strong style="color:#4d43fa;">받기</strong></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+     </div>
+    @@include('../partials/include/footer.html')
+</div>
+
+@@include('../partials/scripts/common.html')
+
+</body>
+</html>

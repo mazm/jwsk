@@ -1,0 +1,80 @@
+.grid-wrap {
+    .character {
+        text-align: center;
+        padding: 2rem 0 1rem;
+        border: 1px solid rgba(0,0,0,0.12);
+        box-shadow: 0 0px 0px rgba(0,0,0,0.12),
+        0 0px 0px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+            0 10px 10px rgba(0,0,0,0.22);
+        }
+    }
+    .rig {
+        list-style: none;
+        font-size: 0;
+        margin-left: -2%;
+        > li {
+            display: inline-block;
+            padding: 0;
+            margin: 0 0 5% 2%;
+            vertical-align: top;
+            box-sizing: border-box;
+            width: calc(50% - 2%);
+            position: relative;
+            @include mq(sm) {
+                width: calc(25% - 2%);
+            }
+        }
+        dt {
+            @include fs(font-size, 320px, 1200px, 12px, 18px);
+            @include Noto-Bold;
+            margin: 1rem 0;
+        }
+        dd {
+            @include fs(font-size, 320px, 1200px, 12px, 16px);
+            @include Noto-Light;
+            @include ellipsis;
+            width: 100%;
+            &.btn-list {
+                margin-top: 1.3rem;
+                text-align: center;
+            }
+            &.line {
+                margin-top: 10px;
+            }
+        }
+    }
+    &.hor {
+        .character {
+            float: left;
+            width: 48%;
+            margin-right: 4%;
+            padding: 4rem 0 2rem;
+        }
+        .rig {
+            > li {
+                width: calc(100% - 2%);
+                @include mq(sm) {
+                    width: calc(50% - 2%);
+                }
+                dl {
+                    float: left;
+                    width: 48%;
+                    dt {
+                        margin: 0 0 1rem 0;
+                    }
+                    dd {
+                        &.btn-list {
+                            position: absolute;
+                            bottom: 0;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
