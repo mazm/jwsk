@@ -122,7 +122,7 @@ Next, install the local dependencies WSK requires:
 $ npm install
 ```
 
-That's it! You should now have everything needed to use the WSK.  
+That's it! You should now have everything needed to use the WSK.
 You may also want to get used to some of the [commands](#commands) available.
 
 
@@ -160,19 +160,19 @@ $ gulp build
 $ gulp lint-js
 ```
 
-`gulp lint-js` task run the separate lint for JS files.  
+`gulp lint-js` task run the separate lint for JS files.
 Included in `gulp` and `gulp build` tasks.
 
 ```sh
 $ gulp fix-js
 ```
 
-`gulp fix-js` task run lint and auto-fix (eslint method) for JS files.  
+`gulp fix-js` task run lint and auto-fix (eslint method) for JS files.
 **Not included in any tasks**.
 
 ## Structure
 
-If you want to use our WSK, you need to know something about the structure.  
+If you want to use our WSK, you need to know something about the structure.
 Your folder structure for WSK:
 
 ```
@@ -197,7 +197,7 @@ Your folder structure for WSK:
 ├── package.json        #File with dependencies
 └── README.md
 ```
- 
+
 In `package.json` you can find all the dependencies. Folder `tasks` - for gulpfile tasks. In `src` folder you can find all sources for the project (images, html, sass, javascript files).
 
 ### `src` folder structure
@@ -240,7 +240,7 @@ Use `vendor_entries` to include plugins into your project.
 
 In our WSK you can use [gulp-file-include](https://github.com/haoxins/gulp-file-include) for **templating html** files. It's simple, just see [example](https://github.com/haoxins/gulp-file-include#examples) or demo example in our WSK folder `src/html`.
 
-For linting html files in WSK used [HTMLHint](https://github.com/htmlhint/HTMLHint). 
+For linting html files in WSK used [HTMLHint](https://github.com/htmlhint/HTMLHint).
 
 ## Styles
 
@@ -305,7 +305,7 @@ For `js`, `scss`, `html` and `vendors_entries` folders after change in included 
 
 ## Images copy and minify
 
-In our WSK by default in [development and build (production) mode](#commands), task `build-images` only copy images.  
+In our WSK by default in [development and build (production) mode](#commands), task `build-images` only copy images.
 For minify images used [gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin).  If you want to minify your images in build (production) mode, please switch option `buildImages.isImageMin = true` in `gulp-config.js`.
 
 ## Tasks
